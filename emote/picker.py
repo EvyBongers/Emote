@@ -578,6 +578,8 @@ class EmojiPicker(Gtk.Window):
 
         if not config.is_wayland:
             os.system("xdotool key ctrl+v")
+        else:
+            os.system("ydotool key ctrl+v")
 
     def add_emoji_to_recent(self, emoji):
         user_data.update_recent_emojis(emoji)
